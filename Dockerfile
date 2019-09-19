@@ -4,8 +4,8 @@ ARG             VCS_REF
 ARG             VERSION
 
 # build
-FROM            golang:1.13-alpine as builder
-RUN             apk add --no-cache git gcc musl-dev make
+FROM            golang:1.13 as builder
+RUN             apt update && apt install -y git gcc musl-dev make libportmidi-dev
 ENV             GO111MODULE=on
 WORKDIR         /go/src/moul.io/music-paint
 COPY            go.* ./
@@ -14,7 +14,8 @@ COPY            . ./
 RUN             make install
 
 # minimalist runtime
-FROM            alpine:3.10
+FROM            debian:buster
+RUN             apt update && apt install -y libportmidi-dev
 LABEL           org.label-schema.build-date=$BUILD_DATE \
                 org.label-schema.name="music-paint" \
                 org.label-schema.description="" \
