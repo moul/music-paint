@@ -1,3 +1,3 @@
-module moul.io/golang-repo-template
+module moul.io/music-paint
 
 go 1.13
