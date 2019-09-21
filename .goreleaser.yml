@@ -3,14 +3,14 @@ before:
     - go mod download
 builds:
   -
-    goos: [linux, darwin, windows]
-    goarch: [386, amd64, arm, arm64]
+    goos: [darwin]
+    goarch: [amd64]
     flags:
       - "-a"
-    ldflags:
-      - '-extldflags "-static"'
-    env:
-      - CGO_ENABLED=0
+    #ldflags:
+    #  - '-extldflags "-static"'
+    #env:
+    #  - CGO_ENABLED=0
 archives:
   - wrap_in_directory: true
     replacements:
