@@ -72,10 +72,16 @@ func main() {
 	}
 	server.OnEvent("/", "drawing", func(s socketio.Conn, msg drawingMsg) {
 		if err := func() error {
-			log.Println("do:", msg)
 			//s.Emit("reply", "have "+msg)
-			note := uint8(10 * int(msg.X1*10))
-			velocity := uint8(msg.Y1 * 100)
+			note := uint8(msg.X1 * 127)
+			if note < 20 {
+				note = 20
+			}
+			velocity := uint8(msg.Y1 * 127)
+			if velocity < 20 {
+				velocity = 20
+			}
+			log.Println("note:", note, "velocity:", velocity, "input:", msg)
 			if err := wr.NoteOn(note, velocity); err != nil {
 				return err
 			}
