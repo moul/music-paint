@@ -38,12 +38,16 @@ github.com/googleapis/gax-go v2.0.0+incompatible/go.mod h1:SFVmujtThgffbyetf+mdk
 github.com/googleapis/gax-go/v2 v2.0.3/go.mod h1:LLvjysVCY1JZeum8Z6l8qUty8fiNwE08qbEPm1M08qg=
 github.com/googollee/go-engine.io v1.4.1 h1:m3WlZAug1SODuWT++UX2nbzk9IUCn9T1SnmHoqppdqo=
 github.com/googollee/go-engine.io v1.4.1/go.mod h1:26oFqHsnuWIzNOM0T08x21eQOydBosKOCgK3tyhzPPI=
+github.com/googollee/go-engine.io v1.4.2 h1:q0FNdZ2g5atRyO0j+P8rHvQf/JjjKHrCUCr2Dmnufmc=
+github.com/googollee/go-engine.io v1.4.2/go.mod h1:26oFqHsnuWIzNOM0T08x21eQOydBosKOCgK3tyhzPPI=
 github.com/googollee/go-socket.io v1.4.2 h1:yxoY4jyPp91ksh0IDBOLrphRXg6EXG+QUdveqg1RGSc=
 github.com/googollee/go-socket.io v1.4.2/go.mod h1:yjlQxKcAZXZjpGwQVW/y1sgyL1ou+DdCpkswURDCRrU=
 github.com/gopherjs/gopherjs v0.0.0-20181017120253-0766667cb4d1/go.mod h1:wJfORRmW1u3UXTncJ5qlYoELFm8eSnnEO6hX4iZ3EWY=
 github.com/gordonklaus/ineffassign v0.0.0-20180909121442-1003c8bd00dc/go.mod h1:cuNKsD1zp2v6XfE/orVX2QE1LC+i254ceGcVeDT3pTU=
 github.com/gorilla/websocket v1.4.0 h1:WDFjx/TMzVgy9VdMMQi2K2Emtwi2QcUQsztZ/zLaH/Q=
 github.com/gorilla/websocket v1.4.0/go.mod h1:E7qHFY5m1UJ88s3WnNqhKjPHQ0heANvMoAMk2YaljkQ=
+github.com/gorilla/websocket v1.4.1 h1:q7AeDBpnBk8AogcD4DSag/Ukw/KV+YhzLj2bP5HvKCM=
+github.com/gorilla/websocket v1.4.1/go.mod h1:YR8l580nyteQvAITg2hZ9XVh4b55+EU/adAjf1fMHhE=
 github.com/gregjones/httpcache v0.0.0-20180305231024-9cad4c3443a7/go.mod h1:FecbI9+v66THATjSRHfNgh1IVFe/9kFxbXtjV0ctIMA=
 github.com/grpc-ecosystem/grpc-gateway v1.5.0/go.mod h1:RSKVYQBd5MCa4OVpNdGskqpgL2+G+NZTnrVHpWWfpdw=
 github.com/jellevandenhooff/dkim v0.0.0-20150330215556-f50fe3d243e1/go.mod h1:E0B/fFc00Y+Rasa88328GlI/XbtyysCtTHZS8h7IrBU=
@@ -65,6 +69,8 @@ github.com/prometheus/common v0.0.0-20180801064454-c7de2306084e/go.mod h1:daVV7q
 github.com/prometheus/procfs v0.0.0-20180725123919-05ee40e3a273/go.mod h1:c3At6R/oaqEKCNdg8wHV1ftS6bRYblBhIjjI8uT2IGk=
 github.com/rakyll/portmidi v0.0.0-20170620004031-e434d7284291 h1:hl7rQwLldjB+FCyUuxSFCAx986GONIoRQwsMesdOknE=
 github.com/rakyll/portmidi v0.0.0-20170620004031-e434d7284291/go.mod h1:tO1ylmFo6+hnYFvj/fd92q30wkNQwgWC/8mcHq0KkQU=
+github.com/rakyll/portmidi v0.0.0-20170716032345-1246dd47c560 h1:LxQoLCD5lQzG48j4BYI6CnKNSbnXAL5KL1oZfempXcE=
+github.com/rakyll/portmidi v0.0.0-20170716032345-1246dd47c560/go.mod h1:tO1ylmFo6+hnYFvj/fd92q30wkNQwgWC/8mcHq0KkQU=
 github.com/russross/blackfriday v1.5.2/go.mod h1:JO/DiYxRf+HjHt06OyowR9PTA263kcR/rfWxYHBV53g=
 github.com/sergi/go-diff v1.0.0/go.mod h1:0CfEIISq7TuYL3j771MWULgwwjU+GofnZX9QAmXWZgo=
 github.com/shurcooL/component v0.0.0-20170202220835-f88ec8f54cc4/go.mod h1:XhFIlyj5a1fBNx5aJTbKoIq0mNaPvOagO+HjB3EtxrY=

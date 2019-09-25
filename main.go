@@ -85,7 +85,7 @@ func main() {
 			if err := wr.NoteOn(note, velocity); err != nil {
 				return err
 			}
-			time.Sleep(time.Nanosecond*1000000)
+			time.Sleep(time.Nanosecond * 1000000)
 			if err := wr.NoteOff(note); err != nil {
 				return err
 			}

@@ -5,4 +5,4 @@ NPM_PACKAGES ?=	.
 
 all: test install
 
--include rules.mk
+include rules.mk
