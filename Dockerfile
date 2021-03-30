@@ -4,7 +4,7 @@ ARG             VCS_REF
 ARG             VERSION
 
 # build
-FROM golang:1.14 as builder
+FROM golang:1.16 as builder
 RUN             apt update && apt install -y git gcc musl-dev make libportmidi-dev
 ENV             GO111MODULE=on
 WORKDIR         /go/src/moul.io/music-paint
