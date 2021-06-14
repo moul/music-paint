@@ -36,7 +36,6 @@ github.com/google/martian v2.1.0+incompatible/go.mod h1:9I4somxYTbIHy5NJKHRl3wXi
 github.com/google/pprof v0.0.0-20181206194817-3ea8567a2e57/go.mod h1:zfwlbNMJ+OItoe0UupaVj+oy1omPYYDuagoSzA8v9mc=
 github.com/googleapis/gax-go v2.0.0+incompatible/go.mod h1:SFVmujtThgffbyetf+mdk2eWhX2bMyUtNHzFKcPA9HY=
 github.com/googleapis/gax-go/v2 v2.0.3/go.mod h1:LLvjysVCY1JZeum8Z6l8qUty8fiNwE08qbEPm1M08qg=
-github.com/googollee/go-engine.io v1.4.1 h1:m3WlZAug1SODuWT++UX2nbzk9IUCn9T1SnmHoqppdqo=
 github.com/googollee/go-engine.io v1.4.1/go.mod h1:26oFqHsnuWIzNOM0T08x21eQOydBosKOCgK3tyhzPPI=
 github.com/googollee/go-engine.io v1.4.2 h1:q0FNdZ2g5atRyO0j+P8rHvQf/JjjKHrCUCr2Dmnufmc=
 github.com/googollee/go-engine.io v1.4.2/go.mod h1:26oFqHsnuWIzNOM0T08x21eQOydBosKOCgK3tyhzPPI=
@@ -44,7 +43,6 @@ github.com/googollee/go-socket.io v1.4.2 h1:yxoY4jyPp91ksh0IDBOLrphRXg6EXG+QUdve
 github.com/googollee/go-socket.io v1.4.2/go.mod h1:yjlQxKcAZXZjpGwQVW/y1sgyL1ou+DdCpkswURDCRrU=
 github.com/gopherjs/gopherjs v0.0.0-20181017120253-0766667cb4d1/go.mod h1:wJfORRmW1u3UXTncJ5qlYoELFm8eSnnEO6hX4iZ3EWY=
 github.com/gordonklaus/ineffassign v0.0.0-20180909121442-1003c8bd00dc/go.mod h1:cuNKsD1zp2v6XfE/orVX2QE1LC+i254ceGcVeDT3pTU=
-github.com/gorilla/websocket v1.4.0 h1:WDFjx/TMzVgy9VdMMQi2K2Emtwi2QcUQsztZ/zLaH/Q=
 github.com/gorilla/websocket v1.4.0/go.mod h1:E7qHFY5m1UJ88s3WnNqhKjPHQ0heANvMoAMk2YaljkQ=
 github.com/gorilla/websocket v1.4.1 h1:q7AeDBpnBk8AogcD4DSag/Ukw/KV+YhzLj2bP5HvKCM=
 github.com/gorilla/websocket v1.4.1/go.mod h1:YR8l580nyteQvAITg2hZ9XVh4b55+EU/adAjf1fMHhE=
@@ -67,7 +65,6 @@ github.com/prometheus/client_golang v0.8.0/go.mod h1:7SWBe2y4D6OKWSNQJUaRYU/AaXP
 github.com/prometheus/client_model v0.0.0-20180712105110-5c3871d89910/go.mod h1:MbSGuTsp3dbXC40dX6PRTWyKYBIrTGTE9sqQNg2J8bo=
 github.com/prometheus/common v0.0.0-20180801064454-c7de2306084e/go.mod h1:daVV7qP5qjZbuso7PdcryaAu0sAZbrN9i7WWcTMWvro=
 github.com/prometheus/procfs v0.0.0-20180725123919-05ee40e3a273/go.mod h1:c3At6R/oaqEKCNdg8wHV1ftS6bRYblBhIjjI8uT2IGk=
-github.com/rakyll/portmidi v0.0.0-20170620004031-e434d7284291 h1:hl7rQwLldjB+FCyUuxSFCAx986GONIoRQwsMesdOknE=
 github.com/rakyll/portmidi v0.0.0-20170620004031-e434d7284291/go.mod h1:tO1ylmFo6+hnYFvj/fd92q30wkNQwgWC/8mcHq0KkQU=
 github.com/rakyll/portmidi v0.0.0-20170716032345-1246dd47c560 h1:LxQoLCD5lQzG48j4BYI6CnKNSbnXAL5KL1oZfempXcE=
 github.com/rakyll/portmidi v0.0.0-20170716032345-1246dd47c560/go.mod h1:tO1ylmFo6+hnYFvj/fd92q30wkNQwgWC/8mcHq0KkQU=
