@@ -9,4 +9,5 @@ require (
 	github.com/rakyll/portmidi v0.0.0-20170716032345-1246dd47c560 // indirect
 	gitlab.com/gomidi/midi v1.23.7
 	gitlab.com/gomidi/portmididrv v0.7.0
+	moul.io/u v1.24.0
 )

@@ -8,37 +8,36 @@ import (
 	socketio "github.com/googollee/go-socket.io"
 	"gitlab.com/gomidi/midi/writer"
 	driver "gitlab.com/gomidi/portmididrv"
+	"moul.io/u"
 )
-
-func must(err error) {
-	if err != nil {
-		panic(err.Error())
-	}
-}
 
 // This example expects the first input and output port to be connected
 // somehow (are either virtual MIDI through ports or physically connected).
 // We write to the out port and listen to the in port.
 func main() {
 	drv, err := driver.New()
-	must(err)
+	u.CheckErr(err)
 
 	// make sure to close all open ports at the end
 	defer drv.Close()
 
 	ins, err := drv.Ins()
-	must(err)
+	u.CheckErr(err)
 
 	outs, err := drv.Outs()
-	must(err)
+	u.CheckErr(err)
+
+	if len(ins) == 0 || len(outs) == 0 {
+		panic("no such midi device, on mac, you can use Audio Midi Setup > Midi Studio > Enable IAC Driver")
+	}
 
 	log.Println(ins)
 	log.Println(outs)
 
 	in, out := ins[0], outs[0]
 
-	must(in.Open())
-	must(out.Open())
+	u.CheckErr(in.Open())
+	u.CheckErr(out.Open())
 
 	wr := writer.New(out)
 
