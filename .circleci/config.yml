@@ -12,9 +12,9 @@ workflows:
       - moul/golang-build:
           prepare-build: sudo apt install libportmidi-dev
           gopkg: moul.io/music-paint
-          tag: '1.12'
+          tag: '1.16'
       - moul/golang-build:
           prepare-build: sudo apt install libportmidi-dev
           gopkg: moul.io/music-paint
-          tag: '1.11'
+          tag: '1.15'
       - moul/docker-build

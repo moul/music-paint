@@ -6,41 +6,40 @@ import (
 	"time"
 
 	socketio "github.com/googollee/go-socket.io"
-	"gitlab.com/gomidi/midi/mid"
+	"gitlab.com/gomidi/midi/writer"
 	driver "gitlab.com/gomidi/portmididrv"
+	"moul.io/u"
 )
-
-func must(err error) {
-	if err != nil {
-		panic(err.Error())
-	}
-}
 
 // This example expects the first input and output port to be connected
 // somehow (are either virtual MIDI through ports or physically connected).
 // We write to the out port and listen to the in port.
 func main() {
 	drv, err := driver.New()
-	must(err)
+	u.CheckErr(err)
 
 	// make sure to close all open ports at the end
 	defer drv.Close()
 
 	ins, err := drv.Ins()
-	must(err)
+	u.CheckErr(err)
 
 	outs, err := drv.Outs()
-	must(err)
+	u.CheckErr(err)
+
+	if len(ins) == 0 || len(outs) == 0 {
+		panic("no such midi device, on mac, you can use Audio Midi Setup > Midi Studio > Enable IAC Driver")
+	}
 
 	log.Println(ins)
 	log.Println(outs)
 
 	in, out := ins[0], outs[0]
 
-	must(in.Open())
-	must(out.Open())
+	u.CheckErr(in.Open())
+	u.CheckErr(out.Open())
 
-	wr := mid.ConnectOut(out)
+	wr := writer.New(out)
 
 	// listen for MIDI
 	// go mid.NewReader().ReadFrom(in)
@@ -53,11 +52,11 @@ func main() {
 		s.SetContext("")
 		log.Println("connected:", s.ID())
 
-		if err := wr.NoteOn(61, 100); err != nil {
+		if err := writer.NoteOn(wr, 61, 100); err != nil {
 			return err
 		}
 		time.Sleep(time.Second)
-		if err := wr.NoteOff(61); err != nil {
+		if err := writer.NoteOff(wr, 61); err != nil {
 			return err
 		}
 
@@ -82,11 +81,11 @@ func main() {
 				velocity = 20
 			}
 			log.Println("note:", note, "velocity:", velocity, "input:", msg)
-			if err := wr.NoteOn(note, velocity); err != nil {
+			if err := writer.NoteOn(wr, note, velocity); err != nil {
 				return err
 			}
 			time.Sleep(time.Nanosecond * 1000000)
-			if err := wr.NoteOff(note); err != nil {
+			if err := writer.NoteOff(wr, note); err != nil {
 				return err
 			}
 			return nil
@@ -98,11 +97,11 @@ func main() {
 		log.Println("error:", e)
 
 		if err := func() error {
-			if err := wr.NoteOn(62, 100); err != nil {
+			if err := writer.NoteOn(wr, 62, 100); err != nil {
 				return err
 			}
 			time.Sleep(time.Second)
-			if err := wr.NoteOff(62); err != nil {
+			if err := writer.NoteOff(wr, 62); err != nil {
 				return err
 			}
 			return nil
@@ -114,11 +113,11 @@ func main() {
 		if err := func() error {
 			log.Println("closed", msg)
 
-			if err := wr.NoteOn(63, 100); err != nil {
+			if err := writer.NoteOn(wr, 63, 100); err != nil {
 				return err
 			}
 			time.Sleep(time.Second)
-			if err := wr.NoteOff(63); err != nil {
+			if err := writer.NoteOff(wr, 63); err != nil {
 				return err
 			}
 			return nil
