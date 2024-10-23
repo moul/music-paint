@@ -14,7 +14,7 @@ COPY            . ./
 RUN             make install
 
 # minimalist runtime
-FROM            debian:buster
+FROM            debian:bookworm
 RUN             apt update && apt install -y libportmidi-dev
 LABEL           org.label-schema.build-date=$BUILD_DATE \
                 org.label-schema.name="music-paint" \
